@@ -1,38 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Inter:wght@500&family=Karla&family=Montserrat:wght@500&family=Pacifico&family=Sacramento&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: linear-gradient(
+    to left,
+    rgba(7,27,82,1) 0%,
+    rgba(0,128,128,1)100%
+  );
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading{
+  font-family: 'Bigelow Rules', cursive;
+  font-size: 72px;
+  color: #0ccac4;
 }
+.searchbox input{
+  padding: 15px;
+  margin: 20px;
+  font-family: inherit;
+  background: rgb(209, 243, 255);
+  outline: none;
+  border: none;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card-list{
+  display: grid;
+  grid-template-columns: repeat(5,13.5rem);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 15px;
+}
+.card{
+  display: grid;
+  justify-content: center;
+  background: #95dada;
+  border-radius: 7px;
+  padding: 20px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+.card:hover{
+  transform: scale(1.05);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
